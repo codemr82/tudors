@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  
+  
+  
+  
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: #1b1b1b;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+}
+
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -8px;
+  left: -8px;
+  animation: cursorAnim2 0.5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.expand {
+  animation: cursorAnim3 0.5s forwards;
+  border: 1px solid red;
+}
+
+p {
+  color: white;
+  font-family: "arial";
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.4em;
+}
+p a {
+  color: teal;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+
+    
+ 
+</header>
+<body>
+  
+<link rel="stylesheet" href="/styles.css">
+    <div class="container">
+        <div class="nav">
+            <h1 id="logo" class="lol">THE TUDORS</h1>
+            <nav>
+                <ul>
+                    <li><a href="/index.html" class="lol">HOME</a></li>
+                    <li><a href="/about.html" class="lol">ABOUT</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="columan">
+                <h2 class="okkk">THE TUDORS</h2>
+                <h1 class="cool">
+                    DID YOU KNOW THE LATE PRINCESS DIANA WAS RELATED TO ANNA BOLEYN, HENRY 8TH 2ND WIFE?</h1>
+                
+            </div>
+            <div class="columan">
+                <div class="cars car1">
+                    <img src="/img/h7.jpeg" alt="">
+                    <h1>START</h1>
+                   
+                </div>
+                <div class="cars car2">
+                    <img src="/img/th (22).jpeg" alt="">
+                    <h1>END</h1>
+                 
+                </div>
+                
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="cursor"></div>
+</body>
+</html>
+    <script src="/index.js"></script>
+
+  
+      <script id="rendered-js" >
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+  cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;");
+});
+
+document.addEventListener('click', () => {
+  cursor.classList.add("expand");
+
+  setTimeout(() => {
+    cursor.classList.remove("expand");
+  }, 500);
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+</body>
+
+<footer>
+    <h1>
+        DID YOU KNOW THE LATE PRINCESS DIANA WAS RELATED TO ANNA BOLYN HENRY 8TH 2ND WIFE.
+    </h1>
+</footer>
+
+</html>
+
